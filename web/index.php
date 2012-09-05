@@ -9,7 +9,7 @@ $scope = new Lisphp_Scope($environment);
 
 $scope['require'] = new Lisphp_Runtime_PHPFunction(function ($file) use ($scope) {
     $program = Lisphp_Program::load(__DIR__.'/../src/'.$file.'.lisphp');
-    $program->execute($scope);
+    return $program->execute($scope);
 });
 
 $program = Lisphp_Program::load($file);

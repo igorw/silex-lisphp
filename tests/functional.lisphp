@@ -1,6 +1,6 @@
 (use <Symfony\Component\HttpFoundation\Request>)
 
-(require "routes")
+(define app (require "routes"))
 
 (define (handle request)
     ((-> app handle) request))

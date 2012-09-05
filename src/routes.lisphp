@@ -24,3 +24,5 @@
 (get "/"
     (lambda []
         (append-newline (. "Hello " (user-name-or-world) "!"))))
+
+app
