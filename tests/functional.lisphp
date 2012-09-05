@@ -5,8 +5,8 @@
 (define (handle request)
     ((-> app handle) request))
 
-(define (request-for uri method)
-    (<Symfony\Component\HttpFoundation\Request>/create method uri))
+(define (request-for method uri)
+    (<Symfony\Component\HttpFoundation\Request>/create uri method))
 
 (let ([response (handle (request-for "GET" "/"))])
     (assertSame 200 ((-> response getStatusCode)))
