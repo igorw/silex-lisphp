@@ -4,8 +4,8 @@
         {
             "package": "lisphp/lisphp",
             "version": "dev-master",
-            "source-reference": "5855fa48cab5da81802b1752f8f99aedbe704434",
-            "commit-date": "1346713557"
+            "source-reference": "c83506469152b03564a4896e640e6418a38ace32",
+            "commit-date": "1346860905"
         },
         {
             "package": "pimple/pimple",
@@ -64,8 +64,8 @@
         {
             "package": "symfony/http-kernel",
             "version": "dev-master",
-            "source-reference": "aeffdc93a69b65dad2f61c917f73c84b8e387ba4",
-            "commit-date": "1346143430"
+            "source-reference": "27e082967d9f417a0ad2f853ee4e37f6b752aa98",
+            "commit-date": "1345973524"
         },
         {
             "package": "symfony/routing",
@@ -76,8 +76,8 @@
         {
             "package": "symfony/routing",
             "version": "dev-master",
-            "source-reference": "475c0550543c882a7e31b9aca7a5dc0615f59547",
-            "commit-date": "1346394981"
+            "source-reference": "79ea5628ea4395fe61ea711808a338cca1b222e8",
+            "commit-date": "1346859854"
         }
     ],
     "packages-dev": null,
