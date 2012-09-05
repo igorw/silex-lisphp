@@ -1,0 +1,20 @@
+(use <Symfony\Component\HttpFoundation\Request>)
+
+(require "routes")
+
+(define (handle request)
+    ((-> app handle) request))
+
+(define (request-for uri method)
+    (<Symfony\Component\HttpFoundation\Request>/create method uri))
+
+(let ([response (handle (request-for "GET" "/"))])
+    (assertSame 200 ((-> response getStatusCode)))
+    (assertSame "Hello World!\n" ((-> response getContent))))
+
+(let ([response (handle (request-for "GET" "/?name=igorw"))])
+    (assertSame 200 ((-> response getStatusCode)))
+    (assertSame "Hello igorw!\n" ((-> response getContent))))
+
+(let ([response (handle (request-for "GET" "/foo"))])
+    (assertSame 404 ((-> response getStatusCode))))

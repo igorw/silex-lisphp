@@ -1,0 +1,26 @@
+(use <Silex\Application>)
+
+(define app (<Silex\Application>))
+
+((-> app offsetSet) "debug" true)
+
+(define (request)
+    ((-> app offsetGet) "request"))
+
+(define (user-name)
+    ((-> (request) get) "name"))
+
+(define (user-name-or-world)
+    (if (not (= (user-name) ""))
+        (user-name)
+        "World"))
+
+(define (append-newline string)
+    (. string "\n"))
+
+(define (get path fn)
+    ((-> app get) path fn))
+
+(get "/"
+    (lambda []
+        (append-newline (. "Hello " (user-name-or-world) "!"))))
