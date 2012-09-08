@@ -1,28 +1,29 @@
+(use <Igorw\ControllerResolver>)
 (use <Silex\Application>)
 
 (define app (<Silex\Application>))
 
 ((-> app offsetSet) "debug" true)
 
-(define (request)
-    ((-> app offsetGet) "request"))
+((-> app offsetSet) "resolver"
+    (lambda [] (<Igorw\ControllerResolver>)))
 
-(define (user-name)
-    ((-> (request) get) "name"))
+(define (user-name request)
+    ((-> request get) "name"))
 
-(define (user-name-or-world)
-    (if (not (= (user-name) ""))
-        (user-name)
-        "World"))
+(define (user-name-or-world request)
+    (value-or-default (user-name request) "World"))
 
-(define (append-newline string)
-    (. string "\n"))
+(define (value-or-default value default)
+    (if (not-equal? value "")
+        value
+        default))
 
 (define (get path fn)
     ((-> app get) path fn))
 
 (get "/"
-    (lambda []
-        (append-newline (. "Hello " (user-name-or-world) "!"))))
+    (lambda [request]
+        (. "Hello " (user-name-or-world request) "!\n")))
 
 app
