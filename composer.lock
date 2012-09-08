@@ -1,11 +1,11 @@
 {
-    "hash": "d268d53cf12bab97dab49efa6233cd2f",
+    "hash": "72f4d92fc9c466070536625834695537",
     "packages": [
         {
             "package": "lisphp/lisphp",
             "version": "dev-master",
-            "source-reference": "c83506469152b03564a4896e640e6418a38ace32",
-            "commit-date": "1346860905"
+            "source-reference": "aad3531f05a1637a67686d2590d5524048bb0e27",
+            "commit-date": "1346915039"
         },
         {
             "package": "pimple/pimple",
@@ -40,7 +40,7 @@
         {
             "package": "symfony/event-dispatcher",
             "version": "dev-master",
-            "source-reference": "v2.1.0-RC2",
+            "source-reference": "v2.1.0",
             "commit-date": "1345643321"
         },
         {
@@ -52,7 +52,7 @@
         {
             "package": "symfony/http-foundation",
             "version": "dev-master",
-            "source-reference": "c72ddd57edfa6f98b10902fbb545fcab0e78baf8",
+            "source-reference": "v2.1.0",
             "commit-date": "1346761482"
         },
         {
@@ -64,8 +64,8 @@
         {
             "package": "symfony/http-kernel",
             "version": "dev-master",
-            "source-reference": "27e082967d9f417a0ad2f853ee4e37f6b752aa98",
-            "commit-date": "1345973524"
+            "source-reference": "d5aec858319b3f7baf945a0fc4b2acc15e4065fd",
+            "commit-date": "1346926365"
         },
         {
             "package": "symfony/routing",
@@ -76,7 +76,7 @@
         {
             "package": "symfony/routing",
             "version": "dev-master",
-            "source-reference": "79ea5628ea4395fe61ea711808a338cca1b222e8",
+            "source-reference": "v2.1.0",
             "commit-date": "1346859854"
         }
     ],
@@ -84,7 +84,7 @@
     "aliases": [
 
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "lisphp/lisphp": 20
     }
