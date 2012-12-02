@@ -1,7 +1,7 @@
 {
     "require": {
         "silex/silex": "1.0.*",
-        "lisphp/lisphp": "dev-master"
+        "lisphp/lisphp": "1.0.*"
     },
     "autoload": {
         "psr-0": { "Igorw": "src" }
