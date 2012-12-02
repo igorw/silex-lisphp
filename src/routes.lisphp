@@ -3,18 +3,18 @@
 
 (define app (<Silex\Application>))
 
-((-> app offsetSet) "debug" true)
+(set-at! app "debug" true)
 
-((-> app offsetSet) "resolver"
+(set-at! app "resolver"
     (lambda [] (<Igorw\ControllerResolver>)))
 
 (define (user-name request)
     ((-> request get) "name"))
 
 (define (user-name-or-world request)
-    (value-or-default (user-name request) "World"))
+    (default-value (user-name request) "World"))
 
-(define (value-or-default value default)
+(define (default-value value default)
     (if (not-equal? value "")
         value
         default))
